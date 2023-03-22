@@ -1,3 +1,6 @@
+/* Import css */
+@import url(base-styles.css);
+
 :root {
   /* Body */
   --body-background-color: #000000;
@@ -14,25 +17,7 @@
   --input-background-color:rgba(77, 77, 77, 0.5); 
 }
 
-@layer reset {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-}
-
-/**
-  The values ​​of this layer are replaced by the following ones, 
-  because the specificity is less than if the direct selectors were used outside the layers.
-*/
-@layer base-reset {
-  button[action="delete"] {
-    background-color: red;
-  }
-}
-
-@layer base {
+@layer principal {
   body {
     background-color: var(--body-background-color);
     padding: 1rem;

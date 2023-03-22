@@ -1,0 +1,17 @@
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+/**
+  The values ​​of this layer are replaced by the following ones, 
+  because the specificity is less than if the direct selectors were used outside the layers.
+*/
+@layer base-reset {
+  button[action="delete"] {
+    background-color: red;
+  }
+}
