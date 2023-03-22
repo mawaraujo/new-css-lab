@@ -1,4 +1,4 @@
-/* Import css */
+@layer framework, reset, base-reset, principal;
 @import url(base-styles.css);
 
 :root {
