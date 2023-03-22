@@ -1,0 +1,75 @@
+:root {
+  /* Body */
+  --body-background-color: #000000;
+
+  /* Title */
+  --title-color: rgb(168, 40, 40);
+  --title-font-size: 3rem;
+
+  /* General text */
+  --text-color: rgba(255, 255, 255, 0.7);
+  --text-font-size: 1rem;
+
+  /** Custom input */
+  --input-background-color:rgba(77, 77, 77, 0.5); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-background-color);
+  padding: 1rem;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-size: var(--title-font-size);
+  font-weight: bold;
+  color: var(--title-color);
+}
+
+:is(:not(h1, h2, h3, h4, h5, h6)) {
+  color: var(--text-color);
+  font-size: var(--text-font-size);
+}
+
+form {
+  margin: 1rem 0;
+}
+
+form:not(:has(.input-component))::before {
+  content: "Empty form";
+  display: block;
+  color: var(--title-color);
+  font-size: var(--title-font-size);
+}
+
+
+form:not(:has(.input-component))::after {
+  content: "Press F5";
+  color: var(--text-color);
+  font-size: var(--title-font-size);
+}
+
+.input-component {
+  background-color: var(--input-background-color);
+  border-width: 0;
+  padding: .5rem;
+  border-radius: .25rem;
+}
+
+.input-component::placeholder {
+  color: var(--text-color);
+}
+
+
+button {
+  background-color: var(--title-color);
+  color: white;
+  padding: .5rem;
+  border-radius: .25rem;
+  border-width: 0;
+}
